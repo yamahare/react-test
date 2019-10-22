@@ -7,6 +7,8 @@ https://www.freecodecamp.org/news/how-to-build-a-movie-search-app-using-react-ho
 # 上記の記事をもとに
 typescriptで書いてみた。
 
+# 以下初期文
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
