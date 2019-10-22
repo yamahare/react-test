@@ -1,3 +1,4 @@
+import "./App.css";
 import React, { useState, useEffect } from 'react';
 import Header from "./Header";
 import Movie, {MovieType} from "./Movie";
@@ -15,8 +16,9 @@ const App: React.FC = () => {
       .then(jsonResponse => {
           setMovies(jsonResponse.Search)
           setLoading(false);
+
       });
-  }, [])
+  },[])
 
   const search = (searchValue: string): void => {
     setLoading(true);
@@ -34,16 +36,19 @@ const App: React.FC = () => {
   }
 
   return (
-    <div>
-      <Header text="HOOKED" />
+    <div className="App">
+      <Header text="映画検索 React Hook" />
       <Search search={search} />
-      {loading ? (
-        <span>loading...</span>
-      ) : (
-        movies.map((movie: MovieType, index) => {
-          return <Movie key={`${index}-${movie.Title}`} movie={movie} />
-        })
-      )}
+      <p className="App-intro">好みの映画を検索しましょうc(`Д´と⌒ｃ)つ彡 英語推奨</p>
+      <div className="movies">
+        {loading ? (
+          <span>loading...</span>
+        ) : (
+          movies.map((movie: MovieType, index) => {
+            return <Movie key={`${index}-${movie.Title}`} movie={movie} />
+          })
+        )}
+      </div>
     </div>
   );
 }
