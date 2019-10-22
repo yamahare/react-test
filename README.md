@@ -1,6 +1,11 @@
 # Reactのテスト用です。
 - buildしたページ：https://yamahare.github.io/react-test/
 
+# 参考もと記事
+https://www.freecodecamp.org/news/how-to-build-a-movie-search-app-using-react-hooks-24eb72ddfaf7/
+
+# 上記の記事をもとに
+typescriptで書いてみた。
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
